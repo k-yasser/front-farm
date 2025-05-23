@@ -97,3 +97,13 @@ loginForm.addEventListener("submit", async (e) => {
     alert("Network error: " + error.message);
   }
 });
+
+
+
+
+//links 
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.location.hash === "#signup") {
+    container.classList.add("sign-up-mode");
+  }
+});

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FarmManager Dashboard</title>
+  <link rel="stylesheet" href="homePage.css" />
+  <script defer src="homePage.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🌿 FarmManager Dashboard</div>
+      <button class="logout-btn" onclick="alert('Logging out...')">🚪 Logout</button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <h1>Welcome, Farmer!</h1>
+    <p>Manage your animals and farm operations efficiently.</p>
+
+    <div class="actions">
+      <input type="text" id="search" placeholder="Search by RFID..." />
+      <button onclick="toggleDialog()" class="add-btn">➕ Add New Animal</button>
+      <button class="view-btn">⚠️ View Non-Available</button>
+    </div>
+
+    <div id="dialog" class="dialog hidden">
+      <h2>Add New Animal</h2>
+      <form id="animalForm">
+        <input type="text" name="rfid" placeholder="RFID (e.g., A123)" required />
+        <input type="text" name="type" placeholder="Type (e.g., Cow)" required />
+        <input type="text" name="gender" placeholder="Gender" required />
+        <input type="number" name="age" placeholder="Age" required />
+        <input type="date" name="birthDate" required />
+        <input type="text" name="vaccin" placeholder="Vaccin Info" required />
+        <button type="submit">Submit</button>
+        <button type="button" onclick="toggleDialog()">Cancel</button>
+      </form>
+    </div>
+
+    <section class="table-section">
+      <h2>Your Animals</h2>
+      <table id="animal-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Last Check</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="animal-body"></tbody>
+      </table>
+      <p id="no-results" class="no-results">No animals found.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FarmManager - Landing Page</title>
+  <link rel="stylesheet" href="landingPage.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script defer src="LandingPage.js"></script>
+  <meta name="description" content="FarmManager helps farmers streamline livestock tracking, health monitoring, and farm productivity. Try it now!">
+  <meta property="og:title" content="FarmManager – Modern Farm Management Software">
+  <meta property="og:description" content="Track, manage, and optimize your farm with powerful digital tools.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?q=80&w=1200">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">🌿 FarmManager</a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="sign.html" class="btn primary">Login</a>
+        <a href="sign.html#signup" class="btn secondary">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay" data-aos="fade-down">
+      <h1>Elevate Your Farm's Potential</h1>
+      <p>Unlock efficiency with FarmManager: Smart animal tracking, health monitoring, and data-driven insights.</p>
+      <a href="index.html#signup" class="btn primary">Get Started Today</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="features" data-aos="fade-up">
+    <h2>Why Choose FarmManager?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/checklist.png" alt="Checklist" />
+        <h3>Comprehensive Animal Tracking</h3>
+        <p>Keep detailed records of all your livestock, from birth to sale.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/security-checked.png" alt="Health Check" />
+        <h3>Health & Verification</h3>
+        <p>Monitor animal health, schedule vaccinations, and manage verification status.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/tractor.png" alt="Tractor" />
+        <h3>Boost Productivity</h3>
+        <p>Make informed decisions with easy-to-access data and insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+ <section id="about" class="about" data-aos="fade-up">
+  <h2>About Us</h2>
+  <p>
+    At FarmManager, we blend tradition with technology to empower modern farmers. Our platform simplifies the complexities of farm management, offering real-time tools to monitor, track, and optimize livestock operations. Whether you're managing a small family farm or a large-scale enterprise, FarmManager is designed to help you thrive in the digital age of agriculture.
+  </p>
+</section>
+  <!-- Call to Action -->
+<section class="cta urgency" data-aos="zoom-in">
+  <h2>Limited Beta Access Closes in <span id="countdown">3 Days</span></h2>
+  <p>
+    Be part of the future of farming. Join our exclusive beta program today and gain early access to powerful insights, streamlined animal tracking, and smart farm tools that give you a competitive edge.
+  </p>
+  <a href="sign.html#signup" class="btn secondary white">Join Beta</a>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> FarmManager. All rights reserved.</p>
+    <p>Modernizing Agriculture, One Click at a Time.</p>
+  </footer>
+
+  <!-- Chat Bubble -->
+  <a href="#" class="chat-bubble" title="Need help?">💬</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="LandingPage.js" defer></script>
+</body>
+</html>
