@@ -5,10 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
+  <!-- Add jwt-decode library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
 </head>
 <body>
   <h1>Welcome to your Dashboard</h1>
-  <p id="token-display"></p>
+  
+  <!-- Info will be dynamically filled -->
+  <p id="user-info"></p>
+  <p id="token-time"></p>
 
   <button onclick="logout()">Logout</button>
 

@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FarmManager Dashboard</title>
   <link rel="stylesheet" href="homePage.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
   <script defer src="homePage.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">🌿 FarmManager Dashboard</div>
-      <button class="logout-btn" onclick="alert('Logging out...')">🚪 Logout</button>
+      <button class="logout-btn" onclick="logout()">🚪 Logout</button>
     </div>
   </nav>
 
   <main class="main">
-    <h1>Welcome, Farmer!</h1>
+    <h1 id="welcome-msg">Welcome, Farmer!</h1>
     <p>Manage your animals and farm operations efficiently.</p>
 
     <div class="actions">
@@ -28,12 +29,37 @@
     <div id="dialog" class="dialog hidden">
       <h2>Add New Animal</h2>
       <form id="animalForm">
-        <input type="text" name="rfid" placeholder="RFID (e.g., A123)" required />
-        <input type="text" name="type" placeholder="Type (e.g., Cow)" required />
-        <input type="text" name="gender" placeholder="Gender" required />
-        <input type="number" name="age" placeholder="Age" required />
-        <input type="date" name="birthDate" required />
-        <input type="text" name="vaccin" placeholder="Vaccin Info" required />
+
+        <div class="form-group">
+          <label for="rfid">RFID</label>
+          <input type="text" name="rfid" placeholder="e.g., A123" required />
+        </div>
+
+        <div class="form-group">
+          <label for="animal-type-select">Type</label>
+          <select name="type-select" id="animal-type-select" class="styled-select" required></select>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text" name="gender" placeholder="Male or Female" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" placeholder="e.g., 2" required />
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate">Birth Date</label>
+          <input type="date" name="birthDate" id="birthDate" class="styled-date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="vaccin">Vaccin Info</label>
+          <input type="text" name="vaccin" placeholder="yes / no" required />
+        </div>
+
         <button type="submit">Submit</button>
         <button type="button" onclick="toggleDialog()">Cancel</button>
       </form>

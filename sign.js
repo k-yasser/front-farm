@@ -51,7 +51,7 @@ signupForm.addEventListener("submit", async (e) => {
     if (res.ok) {
       localStorage.setItem("token", data.token);
       alert("Signup successful!");
-      window.location.href = "dashboard.html"; // ✅ Optional redirect after signup
+      window.location.href = "homePage.html"; // ✅ Optional redirect after signup
     } else {
       alert(data.message || "Signup failed");
     }
@@ -89,7 +89,7 @@ loginForm.addEventListener("submit", async (e) => {
     if (res.ok) {
       localStorage.setItem("token", data.token);
       alert("Login successful!");
-      window.location.href = "dashboard.html"; // ✅ Redirect to dashboard
+      window.location.href = "homePage.html"; // ✅ Redirect to dashboard
     } else {
       alert(data.message || "Login failed");
     }
